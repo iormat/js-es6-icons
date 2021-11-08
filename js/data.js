@@ -1,4 +1,4 @@
-[
+const iconsArr = [
 	{
 		name: 'cat',
 		prefix: 'fa-',

@@ -66,3 +66,15 @@ header {
 .card p {
     margin-top: 20px;
 }
+
+.fas.orange {
+    color: #F2A93B;
+}
+
+.fas.green {
+    color: #12d612;
+}
+
+.fas.blue {
+    color: #1515cf;
+}
