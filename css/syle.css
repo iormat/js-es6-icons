@@ -1,0 +1,68 @@
+/* GENERAL RULES -------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #DDDDDD;
+    font-size: 20px;
+}
+
+/* HEADER RULES -------------------- */
+header {
+    background-color: #fff;
+}
+
+#title {
+    width: 95%;
+    margin: 0 auto;
+    color: #57AED8;
+    font-size: 2rem;
+    height: 70px;
+    line-height: 70px;
+}
+
+#filter {
+    background-color: #57AED8;
+    height: 60px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* MAIN RULES -------------------- */
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.card-container {
+    min-width: 250px;
+    width: calc(100% / 5);
+    padding: 20px;
+}
+
+
+.card {
+    text-align: center;
+    background-color: #F6F5F5;
+    padding: 20px 0;
+    margin-bottom: 50px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-radius: 10px;
+    align-items: flex-start;
+}
+
+.fas {
+    font-size: 2.5rem;
+}
+
+.card p {
+    margin-top: 20px;
+}
