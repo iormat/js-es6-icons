@@ -8,18 +8,48 @@ Ciascuna icona ha una proprietà “color”: utilizzare questa proprietà per v
 
 const getMainCont = document.querySelector(".container");
 console.log(getMainCont);
+//get select tag in HTML
+const chooseThem = document.getElementById('filter_options');
 
-iconsArr.forEach((element) => {
-// print inner html
-getMainCont.innerHTML += `
-    <div class="card-container">
-        <div class="card">
-            <i class="${element.family} ${element.prefix}${element.name} ${element.type} ${element.color}"></i>
-            <p>${element.name}</p>
-        </div>    
-    </div>`;
-})
+//divide different types in different Arrays
+const animalsArr = iconsArr.filter((element) => element.type === "animal");
+console.log(animalsArr)
 
+const vegetablesArr = iconsArr.filter((element) => element.type === "vegetable");
+console.log(vegetablesArr)
 
+const usersArr = iconsArr.filter((element) =>  element.type === "user");
+console.log(usersArr)
 
+// generalized function to print chosen type
+function printResults(relativeArr) {
+    getMainCont.innerHTML = "";
+    relativeArr.forEach((element) =>{
+        getMainCont.innerHTML += `
+        <div class="card-container">
+            <div class="card">
+                <i class="${element.family} ${element.prefix}${element.name} ${element.type} ${element.color}"></i>
+                <p>${element.name}</p>
+            </div>    
+        </div>`;
+    });
+}
 
+//print all icons prior to choice
+printResults(iconsArr);
+
+// take value of select tag and use it to change displayed icons
+document.getElementById('filter_options').addEventListener('change',
+
+    function(){
+        if(chooseThem.value === "all") {
+            printResults(iconsArr);
+        }else if(chooseThem.value === "animal") {
+            printResults(animalsArr);
+        }else if(chooseThem.value === "user") {
+            printResults(usersArr);
+        }else if(chooseThem.value === "vegetable") {
+            printResults(vegetablesArr);
+        }
+    }
+);
