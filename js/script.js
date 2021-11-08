@@ -7,19 +7,16 @@ Ciascuna icona ha una proprietà “color”: utilizzare questa proprietà per v
 */
 
 const getMainCont = document.querySelector(".container");
-console.log(getMainCont);
+
 //get select tag in HTML
 const chooseThem = document.getElementById('filter_options');
 
 //divide different types in different Arrays
 const animalsArr = iconsArr.filter((element) => element.type === "animal");
-console.log(animalsArr)
 
 const vegetablesArr = iconsArr.filter((element) => element.type === "vegetable");
-console.log(vegetablesArr)
 
 const usersArr = iconsArr.filter((element) =>  element.type === "user");
-console.log(usersArr)
 
 // generalized function to print chosen type
 function printResults(relativeArr) {
